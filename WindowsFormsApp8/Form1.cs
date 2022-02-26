@@ -291,6 +291,21 @@ namespace WindowsFormsApp8
                 }
             }
         }
+        public string[] args;
+        private void form1_Load(object sender, EventArgs e)
+        {
+            args = Environment.GetCommandLineArgs();
+
+            if (args.Length > 1) {
+                DecodeFile(File.ReadAllBytes(args[1]));
+                richTextBox2.Text = FolderName;
+                richTextBox1.Text = FileName;
+                richTextBox3.Text = FileContent;
+            }
+            
+        }
+
+        
     }
 
 }

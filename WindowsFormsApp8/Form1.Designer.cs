@@ -127,6 +127,7 @@
             this.Controls.Add(this.button1);
             this.Name = "form1";
             this.Text = "XCP-Editor";
+            this.Load += new System.EventHandler(this.form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
